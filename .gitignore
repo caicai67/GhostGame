@@ -42,3 +42,7 @@ ehthumbs.db
 *.apk
 *.unitypackage
 *.stamp
+
+Library/assetDatabase3
+
+Library/CrashedAssetImports.txt
