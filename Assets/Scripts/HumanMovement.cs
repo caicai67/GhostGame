@@ -16,6 +16,5 @@ public class HumanMovement : MonoBehaviour {
 	void Update () {
 		horz = Input.GetAxis ("Horizontal");
 		body.AddForce (Vector2.right * horz * speed);
-		Debug.Log (horz);
 	}
 }
