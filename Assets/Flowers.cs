@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Flowers : MonoBehaviour {
+	public int flowerValue;
+	public int playerScore;
 
 //	// Use this for initialization
 //	void Start () {
@@ -13,24 +15,12 @@ public class Flowers : MonoBehaviour {
 //	
 //	}
 	 
-	void OnCollisionEnter (Collision collision)
+	void OnCollisionEnter2D (Collision2D collision)
 	{
-	if(other.gameObject.tag == "Player")
-
-			// do something 
-			print("meow");
-	
-//		else if (other.gameObject.tag == "bullet")
-//		{
-//			// do something else    
-//			// for example decrease health
-//		}
-//		else if (other.gameObject.tag == "coin")
-//		{
-//			// do something else    
-//			// increment number of coins
-//		}
-		// and so on .....
+		//if(collision.gameObject.tag == "player")
+		playerScore = playerScore + flowerValue;
+		Destroy (this.gameObject);
+		print (playerScore);
 
 	}
 }
