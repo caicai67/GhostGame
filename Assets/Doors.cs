@@ -4,10 +4,12 @@ using System.Collections;
 public class Doors : MonoBehaviour {
 
 	private HumanMovement human;
+	private GameObject player;
 
 	// Use this for initialization
 	void Start () {
-		
+		player = GameObject.Find ("Human Rig");
+
 	}
 	
 	// Update is called once per frame
@@ -19,7 +21,8 @@ public class Doors : MonoBehaviour {
 	{
 	//	if (Input.GetKeyDown("space"))
 		print ("this is a door!");
-		Transform.root.FindChild("HumanRig").transform.Translate = new Vector2 (5.6f, .99f);
+		//Debug.Log (player);
+		collision.gameObject.transform.position = new Vector3(-12.2f, 17.4f, 0);
 
 	}
 }
