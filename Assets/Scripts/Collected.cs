@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Collectable : MonoBehaviour {
+public class Collected : MonoBehaviour {
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -10,13 +12,9 @@ public class Collectable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-		
-	void OnCollisionStay2D (Collision2D collision)
-	{
-		Destroy (this.gameObject);
-		print ("WOW");
 
+
+			
+	
 	}
 }
