@@ -24,7 +24,16 @@ public class Doors : MonoBehaviour {
 	//	if (Input.GetKeyDown("space"))
 		print ("this is a door!");
 		//Debug.Log (player);
-		collision.gameObject.transform.position = newLoc;
 
+		newLoc = getaRoom();
+
+		collision.gameObject.transform.position = newLoc;
+	}
+
+	Vector3 getaRoom() {
+		GameObject house = GameObject.Find ("House");
+		int numChilds = house.transform.childCount;
+		int roomNdx = Random.Range (0, numChilds);
+		return house.transform.GetChild (roomNdx).position;
 	}
 }
