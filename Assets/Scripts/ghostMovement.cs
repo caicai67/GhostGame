@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ghostMovement : MonoBehaviour {
 
-	public float speed = 10f;
+	public float speed = 5f;
 
 	private Rigidbody2D body;
 	private float horz;
