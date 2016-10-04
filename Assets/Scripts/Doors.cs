@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Doors : MonoBehaviour {
 
+	public Vector3 newLoc = new Vector3(-12.2f, 17.4f, 0);
+
 	private HumanMovement human;
 	private GameObject player;
 
@@ -22,7 +24,7 @@ public class Doors : MonoBehaviour {
 	//	if (Input.GetKeyDown("space"))
 		print ("this is a door!");
 		//Debug.Log (player);
-		collision.gameObject.transform.position = new Vector3(-12.2f, 17.4f, 0);
+		collision.gameObject.transform.position = newLoc;
 
 	}
 }
