@@ -7,6 +7,7 @@ public class Doors : MonoBehaviour {
 
 	private HumanMovement human;
 	private GameObject player;
+	private bool keydown;
 
 	// Use this for initialization
 	void Start () {
@@ -16,18 +17,22 @@ public class Doors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			keydown = true;
+		}
 	
 	}
 
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-	//	if (Input.GetKeyDown("space"))
-		print ("this is a door!");
-		//Debug.Log (player);
+		if (keydown == true) {
+			print ("this is a door!");
+			//Debug.Log (player);
 
-		newLoc = getaRoom();
+			newLoc = getaRoom ();
 
-		collision.gameObject.transform.position = newLoc;
+			collision.gameObject.transform.position = newLoc;
+		}
 	}
 
 	Vector3 getaRoom() {
@@ -36,4 +41,6 @@ public class Doors : MonoBehaviour {
 		int roomNdx = Random.Range (0, numChilds);
 		return house.transform.GetChild (roomNdx).position;
 	}
+
+
 }
