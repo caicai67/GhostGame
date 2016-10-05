@@ -30,7 +30,7 @@ public class Doors : MonoBehaviour {
 
 	void OnCollisionStay2D (Collision2D collision)
 	{
-		if (keydown == true && collision.collider.tag == "Human") {
+		if (keydown == true && collision.collider.tag == "player") {
 			print ("this is a door!");
 			//Debug.Log (player);
 
