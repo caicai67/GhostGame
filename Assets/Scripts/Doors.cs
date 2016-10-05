@@ -12,20 +12,25 @@ public class Doors : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Human Rig");
+		keydown = false;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown ("space")) {
 			keydown = true;
+		} else   {
+			keydown = false;
+
 		}
+		print (keydown);
 	
 	}
 
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnCollisionStay2D (Collision2D collision)
 	{
-		if (keydown == true) {
+		if (keydown == true && collision.collider.tag == "Human") {
 			print ("this is a door!");
 			//Debug.Log (player);
 
